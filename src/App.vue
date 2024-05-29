@@ -47,10 +47,21 @@
 </script>
 
 <style>
+  html,
+  body {
+    background-color: antiquewhite;
+    margin: 0;
+    height: 100%;
+  }
+
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     text-align: center;
-    background-color: antiquewhite;
     color: #2c3e50;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 </style>

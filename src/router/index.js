@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ListView from '../views/ListView2.vue'
-import NewItem from '../views/NewItem2.vue'
+import ListView from '../views/ListView.vue'
+import NewItem from '../views/NewItemView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,7 +9,7 @@ const router = createRouter({
       path: '/',
       name: 'Einkaufsliste',
       component: ListView,
-      props: route => ({ items: route.params.items })
+      props: (route) => ({ items: route.params.items })
     },
     {
       path: '/new-item',
@@ -21,8 +20,8 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.name;
-  next();
-});
+  document.title = to.name
+  next()
+})
 
 export default router
